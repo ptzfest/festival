@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PTZfest Масштабный летний фестиваль в Петрозаводске</title>
+  <link rel="icon" href="PTZfest.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #79FF50;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #79FF50;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    header {
+      height: 100vh;
+      background: url('i.png') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1,
+    header h2,
+    header button {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #79FF50;
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    header h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #ffffffaa;
+      animation: fadeIn 3s ease-in forwards;
+      opacity: 0;
+    }
+
+    .register {
+      background-color: #79FF50;
+      color: #0d0d0d;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .register:hover {
+      background-color: #ff1c65;
+    }
+
+    .program, .lineup, .faq-list, .partners, .reviews {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .event, .artist, .faq-item, .review {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .event:hover, .artist:hover, .faq-item:hover, .review:hover {
+      transform: scale(1.02);
+    }
+
+    .event {
+      border-left: 4px solid #79FF50;
+    }
+
+    .lineup {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .artist img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .artist h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #79FF50;
+    }
+
+    .location iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 1rem;
+    }
+
+    .faq-item h4 {
+      margin-bottom: 0.5rem;
+      color: #79FF50;
+    }
+
+    .partners {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      align-items: center;
+      justify-items: center;
+    }
+
+    .partners img {
+      max-width: 120px;
+      filter: grayscale(1);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .partners img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .review {
+      border: 1px solid #79FF50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PTZfest 2025</h1>
+    <h2>Петрозаводск • 5 июля</h2>
+    <!-- <button class="register">Зарегистрироваться</button> -->
+  </header>
+
+  <section>
+    <h2>Программа</h2>
+    <div class="program">
+      <div class="event"><h3>🎸 Музыкальные выступления</h3><p>Выступления популярных артисов. На весь день с вами.<br>Начало - 14:00<br>Конец - 22:00</p></div>
+      <div class="event"><h3>🎨 Арт-ярмарка</h3><p>Выставка работ художников и дизайнеров Карелии.</p></div>
+      <div class="event"><h3>🍔 Уличная еда</h3><p>Гастрономические зоны с кухнями народов мира.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Лайнап</h2>
+    <div class="lineup">
+      <div class="artist"><img src="artist1.png" alt=""><h3>Молодой Владимир</h3></div>
+      <div class="artist"><img src="artist2.png" alt=""><h3>IvanZolo 2004</h3></div>
+      <div class="artist"><img src="artist3.png" alt=""><h3>Baby Cute</h3></div>
+      <div class="artist"><img src="artist4.png" alt=""><h3>XXXMANERA</h3></div>
+      <div class="artist"><img src="artist5.png" alt=""><h3>MACAN</h3></div>
+      <div class="artist"><img src="secret.png" alt=""><h3>Секретный Гость</h3></div>
+    </div>
+  </section>
+
+  <section class="location">
+    <h2>Локация</h2>
+    <p>Фестиваль пройдёт в живописном месте — на набережной Онежского озера.</p>
+    <h2></h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d560.6335350407201!2d34.377106789296086!3d61.79434202533772!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1746459222067!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section>
+    <h2>Частые вопросы</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Какое возрстное ограничени?</h4>
+        <p>Рекомендация 16+</p>
+      </div>
+      <div class="faq-item">
+        <h4>Где припарковаться?</h4>
+        <p>Будет организована бесплатная парковка возле входа.</p>
+      </div>
+      <div class="faq-item">
+        <h4>На сколько человек расчитана площадка?</h4>
+        <p>Площадка может уместить до 6000 человек</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Партнёры</h2>
+    <div class="partners">
+      <img src="booba.png" alt="Nike">
+      <img src="litenergy.png" alt="Red Bull">
+      <!-- <img src="omniga.png" alt="Spotify"> -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Слова Основателей</h2>
+    <div class="reviews">
+      <div class="review">
+        <p>«Пожалуй, лучший фестиваль лета! Атмосфера будет невероятная! Всех ждем!»</p>
+        <strong>— Алина, Петрозаводск</strong>
+      </div>
+      <div class="review">
+        <p>«Музыка, еда, природа — всё на высшем уровне. Ждём лета и вас!»</p>
+        <strong>— Игорь, Санкт-Петербург</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 PTZfest<br/>
+    <a href="https://www.instagram.com/ptzfest">Instagram</a> • <a href="https://t.me/ptzfest">Telegram</a> • <a href="https://www.tiktok.com/@ptzfest">TikTok</a>
+  </footer>
+</body>
+</html>
